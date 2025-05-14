@@ -2,7 +2,7 @@ import Link from "next/link";
 
     const HeroSection: React.FC = () => {
         return (
-            <section className="relative min-h-[calc(100vh-80px)] flex items-center bg-gradient-to-br from-black via-[#121212] to-[#1a1a1a]">
+            <section className="relative min-h-[calc(100vh-80px)] flex items-center bg-gradient-to-br from-black via-[#121212] to-[#1a1a1a]" id="quem-sou">
                 {/* Decorative dots - top left */}
                 <div className="absolute top-70 left-58 grid grid-cols-4 gap-1.5 z-0">
                     {[...Array(16)].map((_, i) => (
@@ -12,9 +12,9 @@ import Link from "next/link";
 
                 <div className="container mx-auto px-24 z-10">
                     <div className="max-w-xl">
-                        <p className="mb-1 font-light">Olá, eu sou</p>
-                        <h1 className="text-5xl font-mono mb-4 tracking-wide">Paulo Henrique</h1>
-                        <p className="text-sm max-w-md leading-relaxed text-[#d9d9d9] mb-8">
+                        <p className="mb-1 font-light font-jetbrains">Olá, eu sou</p>
+                        <h1 className="text-5xl mb-4 tracking-wide font-jetbrains">Paulo Henrique</h1>
+                        <p className=" max-w-md font-montserrat leading-relaxed text-white mb-8">
                             Um Engenheiro de Software que une paixão por programação e conhecimento em UX Design para criar
                             experiências online funcionais e memoráveis.
                         </p>
@@ -37,7 +37,7 @@ import Link from "next/link";
                                     <path d="M16 17H8" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     <path d="M10 9H9H8" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
-                                <span className="font-bold text-sm">Currículo</span>
+                                <span className="font-semibold font-montserrat text-sm">Currículo</span>
                             </Link>
                             <Link
                                 href="https://github.com/Phrojekt"
@@ -52,7 +52,7 @@ import Link from "next/link";
                                         strokeLinejoin="round"
                                     />
                                 </svg>
-                                <span className="font-bold text-sm">Github</span>
+                                <span className="font-semibold font-montserrat text-sm">Github</span>
                             </Link>
                         </div>
                     </div>

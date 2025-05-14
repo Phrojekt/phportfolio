@@ -87,3 +87,21 @@ body {
     flex-direction: column;
   }
 }
+
+:root {
+  --font-jetbrains: "JetBrains Mono", monospace;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-lato: "Lato", sans-serif;
+}
+
+.font-jetbrains {
+  font-family: var(--font-jetbrains);
+}
+
+.font-montserrat {
+  font-family: var(--font-montserrat);
+}
+
+.font-lato {
+  font-family: var(--font-lato);
+}
