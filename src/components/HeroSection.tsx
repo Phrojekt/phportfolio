@@ -7,11 +7,10 @@ const HeroSection: React.FC = () => {
             <div
                 className="
                     absolute z-0
-                    top-16 left-8
                     grid-cols-4 gap-1.5
                     sm:top-10 sm:left-4
                     md:top-16 md:left-16
-                    lg:top-24 lg:left-24
+                    lg:top-65 lg:left-55
                     hidden md:grid
                 "
             >

@@ -29,7 +29,7 @@ const lato = Lato({
   variable: "--font-lato",
   subsets: ["latin"],
   display: "swap",
-  weight: "100"
+  weight: ["100", "400"]
 });
 
 export const metadata: Metadata = {

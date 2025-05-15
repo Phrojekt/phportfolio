@@ -33,7 +33,7 @@ export default function Home() {
               className="absolute inset-0 bg-black/60 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center z-10"
               tabIndex={-1}
             >
-              <p className="text-lg font-montserrat font-semibold">Acesse o projeto Store</p>
+              <p className="text-lg font-montserrat font-semibold">Acesse a Store</p>
               {/* Adicione mais conteúdo aqui se desejar */}
             </a>
           </div>
@@ -46,7 +46,7 @@ export default function Home() {
               className="w-86 max-w-full h-auto object-contain"
               style={{ maxHeight: 130 }}
             />
-            <p className="text-sm text-center mt-4">O hub digital de Colaboração sustentável entre indústrias.</p>
+            <p className=" text-black text-nowrap text-center font-lato mt-4">O hub digital de Colaboração sustentável entre indústrias.</p>
             {/* Overlay */}
             <a
               href="https://reciclohub-reciclo.vercel.app/"
@@ -55,7 +55,7 @@ export default function Home() {
               className="absolute inset-0 bg-white/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center z-10"
               tabIndex={-1}
             >
-              <p className="text-lg font-montserrat font-semibold text-black">Acesse o Reciclohub</p>
+              <p className="text-lg font-montserrat font-semibold text-black">Acesse o RecicloHub</p>
               {/* Adicione mais conteúdo aqui se desejar */}
             </a>
           </div>
@@ -76,7 +76,7 @@ export default function Home() {
               className="absolute inset-0 bg-white/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center z-10"
               tabIndex={-1}
             >
-              <p className="text-lg font-montserrat font-semibold text-black">Acesse o Mephocodex</p>
+              <p className="text-lg font-montserrat font-semibold text-black">Acesse o projeto Mephocodex</p>
               {/* Adicione mais conteúdo aqui se desejar */}
             </a>
           </div>

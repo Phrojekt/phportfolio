@@ -5,7 +5,7 @@ const ServiceSection: React.FC = () => (
         <h2 className="text-3xl font-jetbrains text-center mb-12">Meus Serviços</h2>
 
         {/* Decorative dots - top left */}
-        <div className="absolute top-30 left-72 grid grid-cols-4 gap-1.5 z-0">
+        <div className="absolute top-30 left-72 z-0 hidden md:grid md:grid-cols-4 md:gap-1.5">
             {[...Array(16)].map((_, i) => (
                 <div key={i} className="w-4 h-4 bg-[#3f3f3f]/65 rounded-full" />
             ))}
@@ -56,7 +56,7 @@ const ServiceSection: React.FC = () => (
         </div>
 
         {/* Decorative dots - bottom right */}
-        <div className="absolute bottom-9 right-72 grid grid-cols-4 gap-1.5">
+        <div className="absolute bottom-9 right-72 grid-cols-4 gap-1.5 hidden md:grid md:grid-cols-4 md:gap-1.5">
             {[...Array(16)].map((_, i) => (
                 <div key={i} className="w-4 h-4 bg-[#3f3f3f]/65 rounded-full" />
             ))}
