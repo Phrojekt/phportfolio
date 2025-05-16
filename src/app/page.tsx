@@ -5,7 +5,7 @@ import ServiceSection from "@/components/ServiceSection"
 
 export default function Home() {
   return (
-    <main className="bg-black text-white min-h-screen">
+    <main className="bg-gradient-to-br from-black via-[#121212] to-[#1a1a1a] text-white min-h-screen">
       {/* Navigation */}
       <Navbar />
 
