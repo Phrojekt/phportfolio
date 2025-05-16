@@ -1,6 +1,40 @@
+"use client"
+
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+
+const NAVBAR_HEIGHT = 80; // ajuste conforme sua navbar
 
 const HeroSection: React.FC = () => {
+    const contentRef = useRef<HTMLDivElement>(null);
+    const [show, setShow] = useState(false);
+    const [animationCount, setAnimationCount] = useState(0);
+    const prevVisible = useRef(false);
+
+    useEffect(() => {
+    const handleScroll = () => {
+        if (!contentRef.current) return;
+        const rect = contentRef.current.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight * 0.85 && rect.bottom > 0;
+        setShow(isVisible);
+
+        if (isVisible && !prevVisible.current) {
+            setAnimationCount((count) => count + 1);
+        }
+        prevVisible.current = isVisible;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // chamada inicial
+
+    return () => {
+        window.removeEventListener("scroll", handleScroll);
+    };
+}, []);
+
+    // Define a duração da animação: 700ms na primeira vez, 1400ms nas próximas
+    const animationDuration = animationCount > 1 ? "duration-[1400ms]" : "duration-700";
+
     return (
         <section className="relative min-h-[calc(100vh-80px)] flex items-center bg-gradient-to-br from-black via-[#121212] to-[#1a1a1a]" id="quem-sou">
             {/* Decorative dots - top left */}
@@ -10,30 +44,41 @@ const HeroSection: React.FC = () => {
                     grid-cols-4 gap-1.5
                     sm:top-10 sm:left-4
                     md:top-16 md:left-16
-                    lg:top-65 lg:left-55
+                    lg:top-58 lg:left-60
                     hidden md:grid
                 "
             >
                 {[...Array(16)].map((_, i) => (
-                    <div key={i} className="w-3 h-3 bg-[#3f3f3f] rounded-full sm:w-2 sm:h-2 md:w-3 md:h-3 lg:w-4 lg:h-4" />
+                    <div key={i} className="w-2 h-2 sm:w-2 sm:h-2 md:w-3 md:h-3 lg:w-4 lg:h-4 bg-[#3f3f3f] rounded-full" />
                 ))}
             </div>
 
-            <div className="container mx-auto px-6 md:px-12 lg:px-24 z-10">
-                <div className="max-w-xl">
-                    <p className="mb-1 font-light font-jetbrains">Olá, eu sou</p>
-                    <h1 className="text-5xl mb-4 tracking-wide font-jetbrains">Paulo Henrique</h1>
-                    <p className=" max-w-md font-montserrat leading-relaxed text-white mb-8">
+            <div className="container mx-auto px-3 sm:px-6 md:px-12 lg:px-24 z-10">
+                <div
+                    ref={contentRef}
+                    className={`max-w-full sm:max-w-3xl transition-all ease-out ${animationDuration}
+                        ${show ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}
+                    `}
+                >
+                    <p className={`mb-1 font-light font-jetbrains text-sm sm:text-xl px-4 sm:px-0 transition-all delay-100 ${animationDuration}`}>
+                        Olá, eu sou
+                    </p>
+                    <h1 className={`text-2xl sm:text-6xl mb-4 sm:mb-6 tracking-wide font-jetbrains whitespace-nowrap px-4 sm:px-0 transition-all delay-200 ${animationDuration}`}>
+                        Paulo Henrique
+                    </h1>
+                    <p className={`max-w-full sm:max-w-[480px] font-montserrat leading-relaxed text-white mb-6 sm:mb-12 text-sm md:text-lg px-4 sm:px-0 transition-all delay-300 ${animationDuration}`}>
                         Um Engenheiro de Software que une paixão por programação e conhecimento em UX Design para criar
                         experiências online funcionais e memoráveis.
                     </p>
 
-                    <div className="flex gap-4">
+                    <div className={`flex flex-col sm:flex-row gap-3 sm:gap-6 w-full max-w-xs sm:max-w-none px-1 sm:px-0 transition-all delay-500 ${animationDuration}
+                        ${show ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}
+                    `}>
                         <Link
                             href="/curriculum.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 bg-white text-black px-6 py-3 rounded-md hover:bg-gray-200 transition-colors"
+                            className="flex items-center gap-2 sm:gap-3 bg-white text-black px-4 py-2 sm:px-8 sm:py-4 rounded-lg hover:bg-gray-200 transition-colors text-base sm:text-xl justify-center"
                         >
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -48,13 +93,13 @@ const HeroSection: React.FC = () => {
                                 <path d="M16 17H8" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 <path d="M10 9H9H8" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
-                            <span className="font-semibold font-montserrat text-base">Currículo</span>
+                            <span className="font-semibold font-montserrat text-base sm:text-xl">Currículo</span>
                         </Link>
                         <Link
                             href="https://github.com/Phrojekt"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 border border-white px-6 py-3 rounded-md hover:bg-white/10 transition-colors"
+                            className="flex items-center gap-2 sm:gap-3 border border-white px-4 py-2 sm:px-8 sm:py-4 rounded-lg hover:bg-white/10 transition-colors text-base sm:text-xl justify-center"
                         >
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -65,7 +110,7 @@ const HeroSection: React.FC = () => {
                                     strokeLinejoin="round"
                                 />
                             </svg>
-                            <span className="font-semibold font-montserrat text-base">Github</span>
+                            <span className="font-semibold font-montserrat text-base sm:text-xl">Github</span>
                         </Link>
                     </div>
                 </div>
@@ -84,7 +129,7 @@ const HeroSection: React.FC = () => {
                 "
             >
                 {[...Array(16)].map((_, i) => (
-                    <div key={i} className="w-3 h-3 bg-[#3f3f3f] rounded-full sm:w-2 sm:h-2 md:w-3 md:h-3 lg:w-4 lg:h-4" />
+                    <div key={i} className="w-2 h-2 sm:w-2 sm:h-2 md:w-3 md:h-3 lg:w-4 lg:h-4 bg-[#3f3f3f] rounded-full" />
                 ))}
             </div>
         </section>
