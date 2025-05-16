@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <nav className="flex justify-end p-4 bg-black/60 backdrop-blur sm:p-6 items-center top-0 sticky z-30">
+        <nav className="flex justify-end p-4 pr-6 sm:pr-70 bg-black/60 backdrop-blur sm:p-6 items-center top-0 sticky z-30">
             {/* Desktop Nav */}
             <div className="hidden sm:flex gap-6 font-montserrat">
                 <Link href="#quem-sou">Quem sou?</Link>
