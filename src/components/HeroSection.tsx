@@ -3,8 +3,6 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-const NAVBAR_HEIGHT = 80; // ajuste conforme sua navbar
-
 const HeroSection: React.FC = () => {
     const contentRef = useRef<HTMLDivElement>(null);
     const [show, setShow] = useState(false);
