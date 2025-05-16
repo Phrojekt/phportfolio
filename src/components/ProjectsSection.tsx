@@ -56,7 +56,7 @@ const ProjectsSection: React.FC = () => {
 
     return (
         <section className="py-16 bg-black min-h-screen" id="projects" ref={sectionRef}>
-            <h2 className={`text-3xl font-mono text-center mb-12 text-white transition-all duration-700 ease-out
+            <h2 className={`text-3xl font-jetbrains text-center mb-12 text-white transition-all duration-700 ease-out
                 ${showTitle ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}
             `}>
                 &lt;Projetos&gt;
