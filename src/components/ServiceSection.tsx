@@ -60,7 +60,7 @@ const ServiceSection: React.FC = () => {
                 </h2>
 
                 {/* Decorative dots - top left */}
-                <div className="absolute top-30 left-72 z-0 hidden md:grid md:grid-cols-4 md:gap-1.5">
+                <div className="absolute top-67 left-72 z-0 hidden md:grid md:grid-cols-4 md:gap-1.5">
                     {[...Array(16)].map((_, i) => (
                         <div key={i} className="w-4 h-4 bg-[#3f3f3f]/65 rounded-full" />
                     ))}
@@ -71,7 +71,7 @@ const ServiceSection: React.FC = () => {
                     <div
                         ref={cardRefs[0]}
                         className={`bg-black text-white p-12 flex flex-col items-center text-center rounded-lg shadow-lg font-montserrat cursor-pointer transition-all duration-700 hover:scale-105 hover:-translate-y-2 hover:duration-200
-                            ${showCards[0] ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"} delay-100
+                            ${showCards[0] ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"} 
                         `}
                     >
                         <div className="mb-8">
@@ -126,7 +126,7 @@ const ServiceSection: React.FC = () => {
                 </div>
 
                 {/* Decorative dots - bottom right */}
-                <div className="absolute bottom-9 right-72 grid-cols-4 gap-1.5 hidden md:grid md:grid-cols-4 md:gap-1.5">
+                <div className="absolute bottom-46 right-72 grid-cols-4 gap-1.5 hidden md:grid md:grid-cols-4 md:gap-1.5">
                     {[...Array(16)].map((_, i) => (
                         <div key={i} className="w-4 h-4 bg-[#3f3f3f]/65 rounded-full" />
                     ))}

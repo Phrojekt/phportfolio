@@ -18,12 +18,15 @@ const lato = Lato({
   variable: "--font-lato",
   subsets: ["latin"],
   display: "swap",
-  weight: ["100", "400"]
+  weight: ["100", "400"],
 });
 
 export const metadata: Metadata = {
   title: "PHP Sales",
   description: "Portfolio de Paulo Henrique",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -34,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${jetbrainsMono.variable} ${montserrat.variable} ${lato.variable} antialiased`}
+        className={`${jetbrainsMono.variable} ${montserrat.variable} ${lato.variable} antialiased`}
       >
         {children}
       </body>
