@@ -70,7 +70,7 @@ const ServiceSection: React.FC = () => {
                     {/* UX/UI Design Card */}
                     <div
                         ref={cardRefs[0]}
-                        className={`bg-black text-white p-12 flex flex-col items-center text-center rounded-lg shadow-lg font-montserrat cursor-pointer transition-all duration-700 hover:scale-105 hover:-translate-y-2 hover:duration-200
+                        className={`bg-black text-white p-12 flex flex-col items-center text-center rounded-lg shadow-lg font-montserrat cursor-pointer transition-all duration-700 hover:scale-105 hover:-translate-y-2 hover:duration-100
                             ${showCards[0] ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"} 
                         `}
                     >
@@ -89,8 +89,8 @@ const ServiceSection: React.FC = () => {
                     {/* Frontend Development Card */}
                     <div
                         ref={cardRefs[1]}
-                        className={`bg-black text-white p-12 flex flex-col items-center text-center rounded-lg shadow-lg font-montserrat cursor-pointer transition-all duration-700 hover:scale-105 hover:-translate-y-2 hover:duration-200
-                            ${showCards[1] ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"} delay-200
+                        className={`bg-black text-white p-12 flex flex-col items-center text-center rounded-lg shadow-lg font-montserrat cursor-pointer transition-all duration-700 hover:scale-105 hover:-translate-y-2 hover:duration-100 
+                            ${showCards[1] ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"} 
                         `}
                     >
                         <div className="mb-8">
@@ -108,8 +108,8 @@ const ServiceSection: React.FC = () => {
                     {/* Fullstack Development Card */}
                     <div
                         ref={cardRefs[2]}
-                        className={`bg-black text-white p-12 flex flex-col items-center text-center rounded-lg shadow-lg font-montserrat cursor-pointer transition-all duration-700 hover:scale-105 hover:-translate-y-2 hover:duration-200
-                            ${showCards[2] ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"} delay-300
+                        className={`bg-black text-white p-12 flex flex-col items-center text-center rounded-lg shadow-lg font-montserrat cursor-pointer transition-all duration-700 hover:scale-105 hover:-translate-y-2 hover:duration-100
+                            ${showCards[2] ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"} 
                         `}
                     >
                         <div className="mb-8">

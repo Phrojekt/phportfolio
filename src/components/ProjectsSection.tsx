@@ -97,12 +97,12 @@ const ProjectsSection: React.FC = () => {
                     `}
                 >
                     <img
-                        src="/reciclohubBlackLogo.png"
+                        src="/RECICLOHUB_Green.png"
                         alt="Reciclohub"
                         className="w-44 sm:w-52 md:w-86 max-w-full h-auto object-contain"
                         style={{ maxHeight: 150 }}
                     />
-                    <p className="hidden sm:block text-xs sm:text-sm text-black text-nowrap text-center font-lato mt-2 sm:mt-4">
+                    <p className="hidden sm:block text-xs font-bold sm:text-sm text-black text-nowrap text-center font-lato mt-2 sm:mt-4">
                         O hub digital de Colaboração sustentável entre indústrias.
                     </p>
                     {/* Overlay */}
@@ -126,21 +126,21 @@ const ProjectsSection: React.FC = () => {
                     `}
                 >
                     <img
-                        src="/MEPHOCODEXIcon.png"
+                        src="/Ravly_logo.png"
                         alt="MEPHOCODEX"
                         className="w-32 sm:w-44 md:w-56 max-w-full h-auto object-contain"
                         style={{ maxHeight: 110 }}
                     />
                     {/* Overlay */}
                     <a
-                        href="https://mephocodexportfolio.vercel.app/"
+                        href="https://ravly-portfolio.vercel.app/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="absolute inset-0 bg-white/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center z-10"
                         tabIndex={-1}
                     >
                         <p className="text-base sm:text-lg font-montserrat font-semibold block md:hidden text-black">Acessar</p>
-                        <p className="text-base sm:text-lg font-montserrat font-semibold hidden md:block text-black">Acesse o Mephocodex</p>
+                        <p className="text-base sm:text-lg font-montserrat font-semibold hidden md:block text-black">Acesse o portfolio</p>
                     </a>
                 </div>
 
